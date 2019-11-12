@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <title>HW11 - Web Visualizations</title>
+
+  <!-- Bring in our bootstrap stylesheet -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+    <body>
+        <!-- Navigation Bar -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                    <a class="navbar-brand" href="index.html">Home</a>
+                    <!-- toggle button that appears when links collapse -->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+                    </button>
+                
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                          <a class="nav-link" href="comparison.html">Comparison<span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="data.html">Data</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Visualizations
+                          </a>
+                          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="nats.html">Natural Rolls</a>
+                            <a class="dropdown-item" href="saves.html">Saving Throws</a>
+                            <a class="dropdown-item" href="per_dec.html">Persuasion vs. Deception</a>
+                            <a class="dropdown-item" href="HDYWTDT.html">HDYWTDT?</a>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+            </nav>
+            
+<!-- Box on the left at full screen-->
+            <div class ='row'>
+                <div class ='col-sm-7'>
+                        <div class="jumbotron">
+                                <h1 class="display-5">Natural Rolls - 20s vs 1s</h1>
+                                <hr class="my-4">
+                                <p><small>Last Update: 11/16/2019</small></p>
+                                <p>  <img src="Resources/Combined_percent.png" alt='Graph of Combined Natural Rolls' class="img-thumbnail"></p>
+                                <p>The graph above displays the percentage rolls where a character rolled a natural 20 or 1 relative to their total number of rolls.  
+                                    I normalized the data by the total number of rolls, because each character operates in a different class, which provides advantages to extra attack rolls.
+                                    For example, when I originally plotted the straight number of times a natural 20 or 1 was rolled, Beau always came out far ahead, because her character had a significantly
+                                    larger number of total rolls as compared to any other character. With Beau's class being a monk, she was provided way more opportunities to roll for an attack than any other character.
+                                    Normalizing the number of times a natural 20 or 1 occurred by total rolls helped to eliminate these class discrepancies between characters. 
+                                </p>                          
+
+                                <p>
+                                    Depending on your outlook in life, Fjord appears to be the luckiest adventurer  with having the highest occurrence of natural 20s, while the Wildmother seems to be keeping an eye out for Caduceus
+                                    by limiting his number of natural 1s significantly.
+                                </p>
+
+                        </div>
+                    
+
+
+                </div>
+                
+<!-- Box on the right at full screen -->
+                <div class ='col-sm-5'>
+                        <div class="jumbotron">
+                                <h1 class="display-5">Visualizations</h1>
+                                <hr class="my-4">
+                                <div class="row align-items-center">
+                                        <div class="col-md-6">
+                                          <div class="thumbnail">
+                                            <a href='nats.html'>
+                                                <img src="Resources/Combined_percent.png" alt='Graph of Combined Natural Rolls' class="img-thumbnail">
+                                            </a>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="thumbnail">
+                                                <a href='saves.html'>
+                                                    <img src="Resources/saves.png" alt="Graph of Total Saving Throws" class="img-thumbnail">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='row align-items-center'>
+                                        <div class="col-md-6">
+                                            <div class="thumbnail">
+                                                <a href='per_dec.html'>
+                                                    <img src="Resources/Persuasion_deception.png" alt="Graph of Persuasion and Deception Rolls" class="img-thumbnail">
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="thumbnail">
+                                                <a href="HDYWTDT.html">
+                                                    <img src="Resources/HDYWTDT_count.png" alt="Graph of Killing Blows" class="img-thumbnail">
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                            </div>
+                    </div>
+
+    </body>
+</html>
